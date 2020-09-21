@@ -1,0 +1,1 @@
+sass C:\Users\knoxb\Desktop\react-tesla\src\scss\Sidebar.scss C:\Users\knoxb\Desktop\react-tesla\src\refs\Sidebar.css
