@@ -1,0 +1,33 @@
+
+&__modelYButtons > .order, 
+&__modelXButtons > .order,
+&__model3Buttons > .order, 
+&__modelSButtons > .order,
+&__solarPanelButtons > .order,
+&__newSolarPanelButtons > .order,
+&__accessoriesButtons > .order      {
+    @extend %sharedModelTraits;
+    @extend %sharedButtonTraits;
+    width: 12% !important;
+    top: 60% !important;
+    left: 35% !important;
+    font-size: 16px !important;
+    color: white !important;
+}
+
+&__modelYButtons > .more, 
+&__modelXButtons > .more,
+&__model3Buttons > .more, 
+&__modelSButtons > .more,
+&__solarPanelButtons > .more,
+&__newSolarPanelButtons > .more,
+&__accessoriesButtons > .more {
+    @extend %sharedModelTraits;
+    @extend %sharedButtonTraits;;
+    background: whitesmoke !important;
+    width: 12% !important;
+    top: 60% !important;
+    left: 50% !important;
+    font-size: 16px !important;
+    //color: white !important;
+}

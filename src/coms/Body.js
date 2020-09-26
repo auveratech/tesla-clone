@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+import ReactDOM from 'react-dom';
 import '../refs/Body.css';
 import $ from 'jquery';
 //import sticky from 'jquery-sticky';
@@ -31,88 +33,6 @@ function Body() {
     const buttonTextMore = "Learn More"
     const buttonTextExist = "Existing Inventory"
     const buttonTextShop = "Shop Now"
-    /* $(document).ready(function() {
-        $(".body__modelYText").sticky();
-    });
- */
-    $(document).ready(function() {
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 120) {
-               $(".body__modelYText").css({"opacity" : "0"})
-               $(".body__modelYButtons").css({"opacity" : "0"}).css({"transition" : "0.5s"}) 
-            }
-            else {
-                $(".body__modelYText").css({"opacity" : "1"})
-                $(".body__modelYButtons").css({"opacity" : "1"}) 
-             }
-        })
-
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 1400) {
-               $(".body__modelXText").css({"opacity" : "0"})
-               $(".body__modelXButtons").css({"opacity" : "0"}).css({"transition" : "0.5s"}) 
-            }
-            else {
-                $(".body__modelXText").css({"opacity" : "1"})
-                $(".body__modelXButtons").css({"opacity" : "1"}) 
-             }
-        })
-
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 2600) {
-               $(".body__model3Text").css({"opacity" : "0"})
-               $(".body__model3Buttons").css({"opacity" : "0"}).css({"transition" : "0.5s"}) 
-            }
-            else {
-                $(".body__model3Text").css({"opacity" : "1"})
-                $(".body__model3Buttons").css({"opacity" : "1"})
-             }
-        })
-
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 3800) {
-               $(".body__modelSText").css({"opacity" : "0"})
-               $(".body__modelSButtons").css({"opacity" : "0"}).css({"transition" : "0.5s"}) 
-            }
-            else {
-                $(".body__modelSText").css({"opacity" : "1"}) 
-                $(".body__modelSButtons").css({"opacity" : "1"})
-             }
-        })
-
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 4900) {
-               $(".body__solarPanelText").css({"opacity" : "0"})
-               $(".body__solarPanelButtons").css({"opacity" : "0"}).css({"transition" : "0.5s"}) 
-            }
-            else {
-                $(".body__solarPanelText").css({"opacity" : "1"})
-                $(".body__solarPanelButtons").css({"opacity" : "1"}) 
-            }
-        })
-
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 6200) {
-               $(".body__newSolarPanelText").css({"opacity" : "0"})
-               $(".body__newSolarPanelButtons").css({"opacity" : "0"}).css({"transition" : "0.5s"}) 
-            }
-            else {
-                $(".body__newSolarPanelText").css({"opacity" : "1"})
-                $(".body__newSolarPanelButtons").css({"opacity" : "1"}) 
-             }
-        })
-
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 8000) {
-               $(".body__accessoriesText").css({"opacity" : "0"})
-               $(".body__accessoriesButtons").css({"opacity" : "0"}).css({"transition" : "0.5s"}) 
-            }
-            else {
-                $(".body__accessoriesText").css({"opacity" : "1"})
-                $(".body__accessoriesButtons").css({"opacity" : "1"})
-             }
-        })
-    })
 
     return (
         <div className="body">
@@ -126,7 +46,7 @@ function Body() {
                     buttonText1 = {buttonTextOrder}
                     buttonText2 = {buttonTextMore}
                 />
-                
+
                 <Model
                     id = "modelX" 
                     model = "Model X"
@@ -135,6 +55,7 @@ function Body() {
                     subText2 = {subText2}
                     buttonText1 = {buttonTextOrder}
                     buttonText2 = {buttonTextExist}
+                    isVisible
                 />
 
                 <Model
