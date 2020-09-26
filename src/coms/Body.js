@@ -1,9 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
-import ScrollAnimation from 'react-animate-on-scroll';
-import ReactDOM from 'react-dom';
 import '../refs/Body.css';
-import $ from 'jquery';
-//import sticky from 'jquery-sticky';
+
 
 import Model from './Model';
 

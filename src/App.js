@@ -15,3 +15,9 @@ function App() {
 }
 
 export default App;
+
+
+//https://www.npmjs.com/package/react-animate-on-scroll
+//https://animate.style/
+//https://www.selbekk.io/blog/2019/08/how-to-fade-in-content-as-it-scrolls-into-view/
+//https://codesandbox.io/s/beautiful-wiles-k23w5?from-embed=&file=/src/index.js:121-604
